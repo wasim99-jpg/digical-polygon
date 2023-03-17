@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>Collection Owners</title>
+  </head>
+  <body>
+    <h1>Collection Owners</h1>
+    <table id="ownersTable">
+      <tr>
+        <th>Address</th>
+        <th>balance</th>
+      </tr>
+    </table>
+  </body>
+  <script>
+    const API_KEY = 'M_T6ToDb3M-NriArIdcd0copdvDW2qGS'
+    const COLLECTION_ADDRESSS = '0x9Ac243DB72c05Ee0A4335FE66Cd8Bc0632435cCb'
+    const API_BASE_URL = 'https://eth-goerli.g.alchemy.com'
+
+    function fetchCollectionOwners() {
+      fetch(
+        `${API_BASE_URL}/nft/v2/${API_KEY}/getOwnersForCollection?contractAddress=${COLLECTION_ADDRESSS}`,
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          const owners = data.ownerAddresses
+          for (let i = 0; i < owners.length; i++) {
+            console.log(owners[i])
+            const ownerRow = document.createElement('tr')
+            ownerRow.innerHTML = `
+              <td>${owners[i]}</td>
+              
+            `
+            document.getElementById('ownersTable').appendChild(ownerRow)
+          }
+        })
+    }
+
+    fetchCollectionOwners()
+  </script>
+</html>

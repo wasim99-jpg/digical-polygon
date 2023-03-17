@@ -1,0 +1,32 @@
+
+  {
+    "name": "Digical - Online Membership utility system using Ethereum Blockchain",
+    "image": "ipfs://QmUFSACXW6uubbHQK2UXEj44C12A88RmntK9s2Enq8TtqH",
+    "description": "Introducing Digical™ - the revolutionary virtual asset project utilizing Ethereum's ERC-1155 token",
+    "attributes": [
+      {
+        "trait_type": "Year",
+        "value": "2023"
+      },
+      {
+        "trait_type": "Edition",
+        "value": "Genesis Edition"
+      },
+      {
+        "trait_type": "Emission",
+        "value": "Red and blue"
+      },
+      {
+        "trait_type": "Resolution",
+        "value": "1080x1080"
+      },
+      {
+        "trait_type": "status",
+        "value": "OG"
+      },
+      {
+        "trait_type": "status",
+        "value": "OG"
+      }
+    ]
+  }

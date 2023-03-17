@@ -1,0 +1,45 @@
+
+<html>
+  <head>
+    <h1>pie chart</h1>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+  </head>
+  <body>
+  <!-- Import the Chart.js library -->
+
+<!-- Set up the canvas for the pie chart -->
+<canvas id="myPieChart" width="400" height="400"></canvas>
+</body>
+<!-- Set up the pie chart data -->
+<script>
+  // Set up the pie chart data
+  const data = {
+    labels: ['Apple', 'Banana', 'Orange', 'Kiwi'],
+    datasets: [{
+      data: [30, 40, 20, 10],
+      backgroundColor: ['#ff6384', '#36a2eb', '#cc65fe', '#ffce56']
+    }]
+  };
+
+  // Set up the pie chart options
+  const options = {
+    title: {
+      display: true,
+      text: 'Fruit Consumption'
+      
+    },
+    responsive: true,
+    maintainAspectRatio: false
+  };
+
+  // Get the canvas element
+  const ctx = document.getElementById('myPieChart').getContext('2d');
+
+  // Create the pie chart
+  const myPieChart = new Chart(ctx, {
+    type: 'pie',
+    data: data,
+    options: options
+  });
+</script>
+</html>
